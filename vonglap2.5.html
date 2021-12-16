@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi ngân hàng</title>
+</head>
+<body>
+<p>Lãi suất phải trả sau 5 năm</p>
+<input type="number" id="pmoney" value="" placeholder="Nhập số tiền vay">
+<button onclick="cinterest()" id="tinhtoan">Tính</button>
+<p id="ketqua">Kết quả:</p>
+<script>
+    //số tiền vay ban đầu: 100.000.000 đ
+    //số năm cho vay: 5
+    //lãi xuất năm:12%/năm
+    //pmoney: tiền vốn;
+    //fmoney: số tiền phải trả sau 5 năm
+    //m: số lần ghép lãi mỗi năm = 12
+    function cinterest() {
+        let pmoney = document.getElementById("pmoney").value;
+        let year = 5;
+        const interest = 0.12;
+        let m = 12
+        fmoney = pmoney * Math.pow((1 + interest / m), (year * m));
+        document.getElementById("ketqua").innerHTML = "Số tiền bạn phải trả là" + "<br>" + fmoney;
+    }
+</script>
+
+</body>
+</html>

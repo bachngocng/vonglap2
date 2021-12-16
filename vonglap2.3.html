@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j <= i; j++) {
+            document.write("* ");
+        }
+        document.write("<br>")
+    }
+
+    for (i = 5; i > 0; i--) {
+        for (j = i; j > 0; j--) {
+            document.write("* ")
+        }
+        document.write("<br>")
+    }
+
+    let n1 = "<p style=\"position:absolute;right: 900px\">";
+    for (let i = 5; i > 0; i--) {
+        for (let j = i; j < 6; j++) {
+            n1 += "* ";
+        }
+        n1 += "</p> <br> <p style=\"position:absolute ; right: 900px\">";
+    }
+    document.write(n1);
+
+    let n2 = "<p style=\"position:absolute ; right: 900px\">";
+    for (let i = 5; i > 0; i--) {
+        for (let j = i; j > 0; j--) {
+            n2 += "* ";
+        }
+        n2 += "</p> <br> <p style=\"position:absolute ; right: 900px\">";
+    }
+    document.write(n2);
+
+
+</script>
+</body>
+</html>
